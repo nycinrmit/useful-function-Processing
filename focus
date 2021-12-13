@@ -1,4 +1,4 @@
-float origX, origY, viewX, viewY;
+float origX, origY, viewX, viewY;//all set to 0
 
 //focus to the point that your mouse point to 
 
