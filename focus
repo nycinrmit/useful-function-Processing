@@ -1,0 +1,36 @@
+float origX, origY, viewX, viewY;
+
+//focus to the point that your mouse point to 
+
+
+void mousePressed(){
+  origX = mouseX;
+  origY = mouseY;
+}
+
+void mouseReleased(){
+  viewX = 0;
+  viewY = 0;
+}
+
+void mouseDragged(){
+  float targetX, targetY;
+  
+  targetX = mouseX - origX;
+  targetY = mouseY - origY;
+  
+  if(abs(targetX) > 320){
+    viewX = targetX / abs(targetX);
+  }
+  else{
+    viewX = targetX / 320;
+  }
+  
+  if(abs(targetY) > 320){
+    viewY = -targetY / abs(targetY);
+  }
+  else{
+    viewY = -targetY / 320;
+  }
+  
+}
